@@ -14,15 +14,15 @@ spec:
         app: php-apache
     spec:
       containers:
-        - name: php-apache
-          image: k8s.gcr.io/hpa-example
-          ports:
-            - containerPort: 80
-          resources:
-            requests:
-              cpu: "200m"
-              memory: "256Mi"
-            limits:
-              cpu: "500m"
-              memory: "512Mi"
+      - name: php-apache
+        image: k8s.gcr.io/hpa-example
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            cpu: 50m
+            memory: 64Mi
+          limits:
+            cpu: 500m
+            memory: 512Mi
 
